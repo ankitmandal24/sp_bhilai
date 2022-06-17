@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperPosition Bhilai</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <script src="https://kit.fontawesome.com/e391ce7786.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href='https://dl.dropboxusercontent.com/u/69747888/MoGo%20carousel/font-awesome.min.css'>
+  <link rel="stylesheet" href="{% static 'styles/styles1.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+  <header class="main-header">
+    <div class="header-wrapper">
+      <div class="main-logo"><img src="{% static 'images/Group-3.ico' %}" width="100" heigt="100"></div>
+      <nav>
+        <ul class="main-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#events">EVENTS</a></li>
+          <li><a href="#gallery">GALLERY</a></li>
+          <li><a href="#main-footer">Contact</a></li>
+          <li><a href="#main-footer">Official Site</a></li>
+
+        </ul>
+        <button class="burger-menu" id="burger-menu">
+          <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <section id="section-1">
+    <div class="content-slider">
+      <input type="radio" id="banner1" class="sec-1-input" name="banner" checked>
+
+      <div class="slider">
+        <div id="top-banner-1" class="banner">
+          <div class="banner-inner-wrapper">
+            <h1>Welcome  <br> TO<br><img src="{% static 'images/Group 3.svg' %}" width="300" height="300"></h1>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <div id="about" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <h3>About US</h3>
+        <img src="{% static 'images/icon.png' %}" height="150" width="150 "align="right">
+        <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h4>
+        <p>Lorem ipsum..</p>
+      </div>
+    </div>
+  </div>
+    <div id="Mission" class="container-fluid bg-grey">
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-globe logo slideanim"></span>
+      </div>
+      <div class="col-sm-8">
+        <h3>Our Mission</h3>
+        <img src="{% static 'images/globe.gif' %}" height="150" width="150 "align="left">
+        <h4></h4>
+        <p><strong>VISION:</strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="events"class="body">
+    <h3>Events</h3>
+    <div class="contoiner">
+      {% for event in events %}
+      <div class="card">
+        <div class="card__header">
+          <img class ="img" src="{{ event.eve_image.url}}" alt="card__image" class="card__image" width="600">
+        </div>
+        <div class="card__body">
+          <span class="tag tag-brown">Food</span>
+          <h4>{{event.title}}</h4>
+          <p>{{event.body}}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div id="events"class="body">
+    <h3>Events</h3>
+    <div class="contoiner">
+      {% for gallery in galleries %}
+      <div class="card">
+        <div class="card__header">
+          <img class ="img" src="{{ gallery.photos.url}}" alt="card__image" class="card__image" width="600">
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="containar">
+    <h1 class="title">Our Team<br></h1>
+
+    <div class="team">
+      {% for team in teams %}
+      <div class="team-img">
+        <img src="{{team.profile_pic.url}}" alt="Team Image">
+        <div class="team-social">
+          <a class="social-tw" href="{{team.twitter}}"><i class="fab fa-twitter"></i></a>
+          <a class="social-li" href="{{team.linkedin}}"><i class="fab fa-linkedin-in"></i></a>
+          <a class="social-in" href="{{team.instagram}}"><i class="fab fa-instagram"></i></a>
+          <a class="social-gh" href="{{team.github}}"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <div class="team-content">
+        <h2>{{team.name}}</h2>
+        <h3>{{team.role}}</h3>
+        <!-- <p>Some text goes here that describes about team member</p> -->
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+  {% include 'index2.html' %}
+</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://use.fontawesome.com/8ae46bccf5.js'></script><script  src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
