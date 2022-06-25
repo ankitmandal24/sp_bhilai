@@ -5,10 +5,6 @@ class Project(models.Model):
 
     about = models.TextField(null=True, blank=True)
     mission = models.TextField(null=True, blank=True)
-
-    def __str__(self):
-        return self.about
-
 class Event(models.Model):
 
     #owner =
@@ -17,16 +13,9 @@ class Event(models.Model):
     title = models.TextField(blank=True, null=True)
 
 
-    def __str__(self):
-        return self.title
-
 class Gallery(models.Model):
     role = models.CharField(max_length=200)
     photos = models.ImageField(null=True, blank=True,)
-
-
-    def __str__(self):
-        return self.role
 
 
 class Team(models.Model):
