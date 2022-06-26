@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperPosition Bhilai</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <script src="https://kit.fontawesome.com/e391ce7786.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href='https://dl.dropboxusercontent.com/u/69747888/MoGo%20carousel/font-awesome.min.css'>
+  <link rel="stylesheet" href="{% static 'styles/styles1.css' %}">
+
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-wrapper">
+      <div class="main-logo"><img src="{% static 'images/Group-3.ico' %}" width="100" heigt="100"></div>
+      <nav>
+        <ul class="main-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#events">EVENTS</a></li>
+          <li><a href="#gallery">GALLERY</a></li>
+          <li><a href="#main-footer">Contact</a></li>
+          <li><a href="#main-footer">Official Site</a></li>
+
+        </ul>
+        <button class="burger-menu" id="burger-menu">
+          <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
+      </nav>
+    </div>
+  </header>
+  {% block content %}
+
+  {% endblock %}
+  {% include 'index2.html' %}
+</body>
+</html>
+
