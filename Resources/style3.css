@@ -1,0 +1,128 @@
+.main-header {
+    position: absolute;
+  
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    font-family: Montserrat, sans-serif;
+    color: #fff;
+    background: transparent;
+   
+  }
+  .main-header .header-wrapper {
+    display: block;
+    /* width: 70%; */
+    margin: 0 auto;
+    padding-top: 1em;
+  }
+.main-menu{
+    float: right;
+    text-align: center;
+}
+
+*,*::before,*::after{
+    box-sizing:border-box;
+  }
+  
+  body{
+    overflow:hidden;
+  }
+  
+  .bg{
+    position:relative;
+    filter:blur(4px);
+    background:linear-gradient(45deg, black, transparent) no-repeat;
+    height:100vh;
+  }
+  
+  .main-container{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+  }
+  
+  .icon-container{
+    text-align:center;
+    margin-bottom:10px;
+  }
+  
+  .carousel-container{
+    display:flex;
+    width:400px;
+    position:relative;
+  }
+  
+  .carousel-images{
+    overflow:hidden;
+    display:flex;
+    border-radius:8px;
+  }
+  
+  .img{
+    width:400px;
+    object-fit:cover;
+    transform:translateX(0);
+    transition:transform 0.4s;
+  }
+  
+  .fa-arrow-right,.fa-arrow-left{
+    background-color:lightblue;
+    position: absolute;
+    top: 50%;
+    padding:0.5em;
+    border-radius:5px;
+    color:#ffffff;
+    cursor:pointer;
+    outline:none;
+  }
+  
+  .fa-arrow-right{
+    right: -18px;
+  }
+  
+  .fa-arrow-left[disabled],.fa-arrow-right[disabled]{
+    cursor:no-drop;
+  }
+  
+  .fa-arrow-left{
+    left: -18px;
+  }
+  
+  #autoplay{
+    padding:0.5em;
+    background-color:#0d6efd;
+    color:#ffffff;
+    cursor:pointer;
+    border-radius:5px;
+  }
+  
+  #autoplay:hover{
+    background-color:#0b5ed7;
+  }
+  
+  .progress-container{
+    display:flex;
+    width:400px;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+  }
+  
+  .chip{
+    width: calc(400px/8);
+    height:5px;
+    background-color:#ffffff;
+    border-radius:5px;
+    position:relative;
+  }
+  
+  .active-chip{
+    width:0px;
+    background-color:#0000ff;
+    display:inline-block;
+    position:absolute;
+    inset:0;
+    border-radius:10px;
+    height:100%;
+  }
