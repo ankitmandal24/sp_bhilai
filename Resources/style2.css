@@ -887,9 +887,12 @@ body {
   right: 62px;
 }
 .mar-top{
-  margin-top: 15px;
+  margin-top: 20px;
 }
 .imcrop{
   width: 100%;
   height: 70vh;
+}
+.font1{
+  font-family: 'Changa', sans-serif;
 }
