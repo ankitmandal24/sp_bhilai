@@ -15,7 +15,7 @@
   <link rel='stylesheet' href='https://dl.dropboxusercontent.com/u/69747888/MoGo%20carousel/font-awesome.min.css'>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style2.css">
+  <link rel="stylesheet" href="./style2.css">
 </head>
 
 
@@ -31,10 +31,10 @@
             <ul class="main-menu">
               <li><a href="#about">About</a></li>
               <li><a href="#events">EVENTS</a></li>
-              <li><a href="#gallery">GALLERY</a></li>
+              <li><a href="#gall">GALLERY</a></li>
               <li><a href="#">E-Magzine</a></li>
               <li><a href="#">Team</a></li>
-              <li><a href="#main-footer">Contact</a></li>
+              <li><a href="#contact">Contact</a></li>
               <li><a href="#">Verify Certificate</a></li>
             </ul>
             <button class="burger-menu" id="burger-menu">
@@ -71,23 +71,31 @@
 
     <div id="about" class="container-fluid">
       <!-- <div class="row"> -->
-        <div class="col-sm-8">
-          <h3>About US</h3>
-          <!-- <img src="images.png" height="150" width="150 " align="right"> -->
-          <h4 class="mar-top">Superposition is an international non-profit bridging the gender gap in STEM through events, chapters, and
-            mentorship. Our mission is to empower women in STEM by creating learning opportunities and supportive spaces
-            for pursuing their passions.
-            <br><br>
-            Since 2016, we've held the Bay Area's largest gender-focused hackathon in partnership with companies like
-            VSCO and Uber. In March 2020, we expanded beyond a 24-hour hackathon to provide year-round opportunities for
-            our community, such as our Uber mentorship programs and chapter program.
-            <br><br>
-            Now, Superposition is a global organization with 120 chapters in 25 countries. Get involved with
-            Superposition by joining our Slack or starting a chapter!
-          </h4>
-          <p>More..</p>
-        </div>
+      <div class="col-sm-8">
+        <h3>About US</h3>
+        <!-- <img src="images.png" height="150" width="150 " align="right"> -->
+        <h4 class="mar-top">
+          Superposition is an international non-profit bridging the gender gap in STEM. Our mission to empower women in
+          STEM by creating educational opportunities and supportive environments in which they can develop their
+          passions. <br>
+          Every year, we host the Bay Area's largest all-women and non-binary hackathon. This February, we
+          hosted 220 attendees at Uber HQ in San Francisco. Recently, we've expanded beyond a 24-hour hackathon to
+          provide year-round opportunities for our community, such as a virtual webinar series and chapter program. With
+          our events, content, and 23 chapters, we've reached 100,000+ individuals in 51+ countries.
+          <br><br>
+          Women make up only 28% of the STEM workforce. Superposition bhilai is founded by Mrs Khushi Gupta in 2022 and
+          seeks to bridge that gender gap by empowering young women in STEM through educational opportunities and
+          supportive environments . <br>
+          With Founder Miss Khushi Gupta and Co-Founder Dr. Sidharta Choubey, there are 36 members working in
+          Superposition Bhilai Chapter.<br>
+          Superposition is an international non-profit bridging the gender gap in STEM . Our
+          mission to empower women in STEM by creating educational opportunities and supportive environments in which
+          they can develop their passions
+
+        </h4>
+        <!-- <p>More..</p> -->
       </div>
+    </div>
     <!-- </div> -->
     <hr style="margin: auto;">
 
@@ -109,14 +117,12 @@
         </div>
         <div class="col-sm-8">
           <h2>Our Mission</h2>
-          <img src="globe.gif" height="150" width="150 " align="left">
-          <h4></h4>
-          <p><strong>VISION:</strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-            galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but
-            also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+          <h4 class="mar-top">
+            <strong>VISION:</strong>OUR MISSION IS TO EMPOWER WOMEN IN STEM BY CREATING EDUCATIONAL OPPORTUNITIES AND
+            SUPPORTIVE ENVIRONMENTS IN WHICH THEY CAN DEVELOP THEIR PASSION SUPERPOSITION IS NOW FOR CREATING A CODING
+            ENVIRONMENT IN SSTC BHIALI WE ARE PROVIDING CERTIFIED COURSES AT VERY LOW COST SO EVERYONE CAN AFFORD IT
+          </h4>
         </div>
       </div>
     </div>
@@ -144,8 +150,8 @@
               width="600">
           </div>
           <div class="card__body">
-            <span class="tag tag-blue">Technology</span>
-            <h4>What's new in 2022 Tech</h4>
+            <span class="tag tag-blue">Cp/DSA</span>
+            <h4>Let's Learn about Cp/DSA</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus.
               Doloremque, nihil! At ea atque quidem!</p>
           </div>
@@ -199,12 +205,12 @@
 
 
 
-    <div class="gallery my-3">
+    <div class="gallery my-3" id="gall">
       <h3>Gallery</h3>
     </div>
 
     <!-- corousel -->
-    
+
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -216,13 +222,25 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://i.ibb.co/GnZWSfz/1.jpg" class="d-block w-100" alt="Super-Position Bhilai">
+          <img src="https://i.ibb.co/GnZWSfz/1.jpg" class="d-block imcrop" alt="Super-Position Bhilai">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Cp/DSA</h5>
+            <p>Let's learn about Cp/DSA</p>
+          </div>
         </div>
         <div class="carousel-item">
-          <img src="https://i.ibb.co/VY07G2q/2.jpg" class="d-block w-100" alt="Super-Position Bhilai">
+          <img src="https://i.ibb.co/VY07G2q/2.jpg" class="d-block imcrop" alt="Super-Position Bhilai">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Linkedin/Resume Building</h5>
+            <p>Event on "How to built your profile and Resume"</p>
+          </div>
         </div>
         <div class="carousel-item">
-          <img src="https://i.ibb.co/Xk9Db52/3.jpg" class="d-block w-100" alt="Super-Position Bhilai">
+          <img src="https://i.ibb.co/Xk9Db52/3.jpg" class="d-block imcrop" alt="Super-Position Bhilai">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Coding Culture</h5>
+            <p>Why Everyone should know about Coding</p>
+          </div>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -236,7 +254,7 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-  
+
 
 
 
@@ -253,31 +271,14 @@
 
 
 
-    <div class="containar">
-      <h1 class="title">Our Team<br></h1>
-      <div class="team">
-        <div class="team-img">
-          <img src="https://demo.htmlcodex.com/660/team-page-html-template/img/team-2-2.jpg" alt="Team Image">
-          <div class="team-social">
-            <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
-            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-        <div class="team-content">
-          <h2>Josh Dunn</h2>
-          <h3>CEO &amp; Founder</h3>
-          <p>Some text goes here that describes about team member</p>
-        </div>
-      </div>
-    </div>
 
 
 
 
 
 
-    <hr style="margin: auto;">
+
+
 
 
 

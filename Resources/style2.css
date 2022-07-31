@@ -889,3 +889,7 @@ body {
 .mar-top{
   margin-top: 15px;
 }
+.imcrop{
+  width: 100%;
+  height: 70vh;
+}
