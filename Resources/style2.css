@@ -5,7 +5,7 @@ body {
   padding: 0;
   font-size: 16px;
   /* background: #fff; */
-  background-color: black;
+  background-color: rgba(230, 230, 250, 0.596);
 }
 body section {
   display: block;
@@ -22,30 +22,30 @@ body li {
   padding: 0;
 }
 body h1 {
-  font-family: Montserrat, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
   text-transform: uppercase;
 }
 body h2 {
-  font-family: Montserrat, sans-serif;
+  
   font-size: 1.875em;
   font-weight: 700;
-  text-transform: uppercase;
+ 
 }
 body h3 {
-  font-family: 'Kaushan Script', cursive;
+  /* font-family: 'Kaushan Script', cursive; */
   font-size: 1.5em;
   font-weight: 400;
 }
 body h4 {
-  font-family: Montserrat, sans-serif;
-  font-size: 0.875em;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1em;
   font-weight: 400;
-  text-transform: uppercase;
+  
 }
 body p {
   line-height: 150%;
-  font-family: Roboto, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 0.9375em;
   color: #999;
 }
@@ -85,7 +85,7 @@ body a {
 
   width: 100%;
   z-index: 1000;
-  font-family: Montserrat, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   color: #fff;
   background: transparent;
 
@@ -118,9 +118,9 @@ body a {
   font-size: 0.875em;
 }
  .main-header .header-wrapper .main-menu li a:hover {
-  color: #fce38a;
-  border-bottom: 0.1875em solid #fce38a;
-  transition: 0.1s;
+  color: lavender;
+  border-bottom: 0.1875em solid lavender;
+  
   /* text-decoration-line: underline; */
   /* border-bottom: 2px solid #fce38a; */
 }
@@ -171,12 +171,12 @@ body a {
 #section-1 .content-slider .slider .banner .banner-inner-wrapper {
   height: 100%;
   padding-top: 6em;
- background-image: linear-gradient(rgb(39 98 159), rgb(215 209 117));
+ background-image: linear-gradient(rgb(39 98 159), rgba(230, 230, 250, 0.596));
   box-sizing: border-box;
 }
 #section-1 .content-slider .slider .banner .banner-inner-wrapper h2 {
   padding-bottom: 0.3em;
-  font-family: 'Kaushan Script', cursive;
+  /* font-family: 'Kaushan Script', cursive; */
   font-weight: 400;
   font-size: 2.5em;
   text-transform: none;
@@ -184,6 +184,9 @@ body a {
 #section-1 .content-slider .slider .banner .banner-inner-wrapper h1 {
   font-size: 6em;
   line-height: 95%;
+  background: -webkit-linear-gradient(rgb(207 136 205),rgb(255, 255, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 #section-1 .content-slider .slider .banner .banner-inner-wrapper .line {
   display: block;
@@ -199,7 +202,7 @@ body a {
 #section-1 .content-slider .slider .banner .banner-inner-wrapper .learn-more-button a {
   padding: 0.5em 2em;
   text-align: center;
-  font-family: Montserrat, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 0.875em;
   color: #fff;
   text-transform: uppercase;
@@ -237,7 +240,7 @@ body a {
   display: block;
   width: 70%;
   margin: 0 auto;
-  font-family: Montserrat, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   color: #fff;
 }
 #section-1 .content-slider nav .controls label {
@@ -250,7 +253,7 @@ body a {
   padding-top: 1em;
   text-align: left;
   text-transform: uppercase;
-  font-family: Montserrat, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1em;
   color: #f6eac5;
   font-weight: 400;
@@ -509,7 +512,7 @@ h3 {
 }
 
 .body {
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   display: grid;
   place-items: center;
   height: 80vh;
@@ -590,7 +593,7 @@ background: linear-gradient(to bottom, #ef473a, #cb2d3e);
 
 .card__body h4 {
   font-size: 1.5rem;
-  text-transform: capitalize;
+  
 }
 
 .card__footer {
@@ -623,7 +626,7 @@ background: linear-gradient(to bottom, #ef473a, #cb2d3e);
 .containar {
   position: relative;
   width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 h1.title {
@@ -861,9 +864,7 @@ hr{
   width: 100%;
 
 }
-body {
-  background-color: rgba(215 231 78 / 39%);
-}
+
 
 .card {
   width: 23%;
@@ -894,5 +895,5 @@ body {
   height: 70vh;
 }
 .font1{
-  font-family: 'Changa', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
