@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="our_team.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'styles/our_team.css' %}">
+    <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+
+
+
+    <title>Our_Teams</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-wrapper">
+          <div class="main-logo"><img src="{% static 'images/Group-3.ico' %}" width="100" heigt="100"></div>
+          <nav>
+            <ul class="main-menu">
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="{% url 'comingsoon' %}">EVENTS</a></li>
+              <li><a href="{% url 'comingsoon' %}" target="_blank">E-magazine</a></li>
+              <li><a href="our_team.html" target="_blank">TEAM</a></li>
+              <!-- <li><a href="#main-footer">Contact</a></li> -->
+            </ul>
+            <button class="burger-menu" id="burger-menu">
+              <ion-icon class="bars" name="menu-outline"></ion-icon>
+            </button>
+          </nav>
+        </div>
+      </header>
+
+
+<!-- ======= Top Section ======= -->
+<section id="hero">
+    <img src="{% static 'images/team.jpeg' %}" alt="**">
+
+  <div class="hero-container">
+
+    <h1>superposition  team</h1>
+    <h2>empowering gender minorities together</h2>
+    <a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
+  </div>
+</section><!-- End Top -->
+
+
+<!-- our team starts --><h1 class="title">OUR TEAM<br></h1>
+{% for founder in founders %}
+<div class="containar">
+  <!-- <h1 class="title">  </h1> -->
+  <br>
+  <br>
+  <div class="teams">
+    <div class="team">
+
+      <div class="team-img">
+        <img src="{{founder.profile_pic.url}}" alt="Team Image" >
+        <div class="team-social">
+          <a class="social-tw" href="{{founder.twitter}}"><i class="fab fa-twitter"></i></a>
+          <a class="social-li" href="{{founder.linkedin}}"><i class="fab fa-linkedin-in"></i></a>
+          <a class="social-in" href="{{founder.instagram}}"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="team-content">
+        <h2>{{founder.name}}</h2>
+        <h3>{{founder.role}}</h3>
+        <!-- <p>Some text goes here that describes about team member</p> -->
+      </div>
+    </div>
+  </div>
+
+ <div class="card">
+  <div class="card-header">
+    {{founder.role}}'s Message
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>{{founder.message}}</p>
+    </blockquote>
+  </div>
+</div>
+{% endfor %}
+
+
+
+
+<!-- technical section -->
+<div class="container2">
+  <h2>Technical Team</h2>
+ </div>
+
+
+ <section class="main_heading my-5 bg-light pt-5">
+
+  <div class="container">
+
+
+          <div class="row gy-7 gx-3">
+
+            {% for technical in technicals %}
+
+              <div class="col-md-4 col-10 col-xxl-4 mx-auto">
+                <div class="team">
+                  <div class="team-img">
+                    <img src="{{technical.profile_pic.url}}" alt="Team Image">
+                    <div class="team-social">
+                      <a class="social-tw" href="{{technical.twitter}}"><i class="fab fa-twitter"></i></a>
+                      <a class="social-li" href="{{technical.linkedin}}"><i class="fab fa-linkedin-in"></i></a>
+                      <a class="social-in" href="{{technical.instagram}}"><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
+                  <div class="team-content">
+                    <h2>{{technical.name}}</h2>
+                    <h3>{{technical.role}}</h3>
+                    <!-- <p>Some text goes here that describes about team member</p> -->
+                  </div>
+
+                </div>
+              </div>
+             {% endfor %}
+
+</section>
+<!-- technical section ends -->
+<!-- graphic section stART -->
+<div class="container2">
+  <h2>Graphics Team</h2>
+ </div>
+
+
+ <section class="main_heading my-5 bg-light pt-5">
+
+  <div class="container">
+
+
+          <div class="row gy-7 gx-3">
+
+            {% for graphic in graphics %}
+
+              <div class="col-md-4 col-10 col-xxl-4 mx-auto">
+                <div class="team">
+                  <div class="team-img">
+                    <img src="{{graphic.profile_pic.url}}" alt="Team Image">
+                    <div class="team-social">
+                      <a class="social-tw" href="{{graphic.twitter}}"><i class="fab fa-twitter"></i></a>
+                      <a class="social-li" href="{{graphic.linkedin}}"><i class="fab fa-linkedin-in"></i></a>
+                      <a class="social-in" href="{{graphic.instagram}}"><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
+                  <div class="team-content">
+                    <h2>{{graphic.name}}</h2>
+                    <h3>{{graphic.role}}</h3>
+                    <!-- <p>Some text goes here that describes about team member</p> -->
+                  </div>
+
+                </div>
+              </div>
+             {% endfor %}
+
+</section>
+<!-- graphic section ends -->
+
+<!-- cc Team section -->
+<div class="container2">
+  <h2>Content Team</h2>
+ </div>
+
+
+ <section class="main_heading my-5 bg-light pt-5">
+
+  <div class="container">
+
+
+          <div class="row gy-7 gx-3">
+
+            {% for cc in ccs %}
+
+              <div class="col-md-4 col-10 col-xxl-4 mx-auto">
+                <div class="team">
+                  <div class="team-img">
+                    <img src="{{cc.profile_pic.url}}" alt="Team Image">
+                    <div class="team-social">
+                      <a class="social-tw" href="{{cc.twitter}}"><i class="fab fa-twitter"></i></a>
+                      <a class="social-li" href="{{cc.linkedin}}"><i class="fab fa-linkedin-in"></i></a>
+                      <a class="social-in" href="{{cc.instagram}}"><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
+                  <div class="team-content">
+                    <h2>{{cc.name}}</h2>
+                    <h3>{{cc.role}}</h3>
+                    <!-- <p>Some text goes here that describes about team member</p> -->
+                  </div>
+
+                </div>
+              </div>
+             {% endfor %}
+
+</section>
+<!-- cc section ends -->
+<!-- pr Team section -->
+<div class="container2">
+  <h2>PR Team</h2>
+ </div>
+
+
+ <section class="main_heading my-5 bg-light pt-5">
+
+  <div class="container">
+
+
+          <div class="row gy-7 gx-3">
+
+            {% for pr in prs %}
+
+              <div class="col-md-4 col-10 col-xxl-4 mx-auto">
+                <div class="team">
+                  <div class="team-img">
+                    <img src="{{pr.profile_pic.url}}" alt="Team Image">
+                    <div class="team-social">
+                      <a class="social-tw" href="{{pr.twitter}}"><i class="fab fa-twitter"></i></a>
+                      <a class="social-li" href="{{pr.linkedin}}"><i class="fab fa-linkedin-in"></i></a>
+                      <a class="social-in" href="{{pr.instagram}}"><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
+                  <div class="team-content">
+                    <h2>{{pr.name}}</h2>
+                    <h3>{{pr.role}}</h3>
+                    <!-- <p>Some text goes here that describes about team member</p> -->
+                  </div>
+
+                </div>
+              </div>
+             {% endfor %}
+
+</section>
+<!-- pr media section ends -->
+
+<!--  smo section starts -->
+<div class="container2">
+  <h2>Sales & Marketing Team</h2>
+ </div>
+
+
+ <section class="main_heading my-5 bg-light pt-5">
+
+  <div class="container">
+
+
+          <div class="row gy-7 gx-3">
+
+            {% for smo in smos %}
+
+              <div class="col-md-4 col-10 col-xxl-4 mx-auto">
+                <div class="team">
+                  <div class="team-img">
+                    <img src="{{smo.profile_pic.url}}" alt="Team Image">
+                    <div class="team-social">
+                      <a class="social-tw" href="{{smo.twitter}}"><i class="fab fa-twitter"></i></a>
+                      <a class="social-li" href="{{smo.linkedin}}"><i class="fab fa-linkedin-in"></i></a>
+                      <a class="social-in" href="{{smo.instagram}}"><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
+                  <div class="team-content">
+                    <h2>{{smo.name}}</h2>
+                    <h3>{{smo.role}}</h3>
+                    <!-- <p>Some text goes here that describes about team member</p> -->
+                  </div>
+
+                </div>
+              </div>
+             {% endfor %}
+
+</section>
+
+
+
+<!--  sm section starts -->
+<div class="container2">
+  <h2>Social Media Team</h2>
+ </div>
+
+
+ <section class="main_heading my-5 bg-light pt-5">
+
+  <div class="container">
+
+
+          <div class="row gy-7 gx-3">
+
+            {% for sm in sms %}
+
+              <div class="col-md-4 col-10 col-xxl-4 mx-auto">
+                <div class="team">
+                  <div class="team-img">
+                    <img src="{{sm.profile_pic.url}}" alt="Team Image">
+                    <div class="team-social">
+                      <a class="social-tw" href="{{sm.twitter}}"><i class="fab fa-twitter"></i></a>
+                      <a class="social-li" href="{{sm.linkedin}}"><i class="fab fa-linkedin-in"></i></a>
+                      <a class="social-in" href="{{sm.instagram}}"><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
+                  <div class="team-content">
+                    <h2>{{sm.name}}</h2>
+                    <h3>{{sm.role}}</h3>
+                    <!-- <p>Some text goes here that describes about team member</p> -->
+                  </div>
+
+                </div>
+              </div>
+             {% endfor %}
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Option 1: Bootstrap Bundle with Popper -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+ crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+ integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+ crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+ integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+ crossorigin="anonymous"></script>
+
+ <script type="text/javascript">
+   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+ </script>
+
+
+</body>
+</html>

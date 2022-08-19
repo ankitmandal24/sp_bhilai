@@ -1,9 +1,9 @@
-from django.core.mail import BadHeaderError, send_mail
+# from django.core.mail import BadHeaderError, send_mail
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
-from . models import Project,Event,Gallery,Team
+from . models import Project,Event,Gallery,Founder,Technical,Pr,Cc,Graphic,Smo,Sm
 # from .forms import ProjectForm
-from . forms import ContactForm
+# from . forms import ContactForm
 
 # Create your views here.
 
@@ -11,30 +11,34 @@ def projects(request):
     projects = Project.objects.all()
     events = Event.objects.all()
     galleries = Gallery.objects.all()
-    teams = Team.objects.all()
+    # teams = Team.objects.all()
     context = {'projects': projects,
         'events': events,
         'galleries':galleries,
-        'teams': teams
+        # 'teams': teams
     }
     return render(request, "index.html", context)
 
 
-def contactView(request):
-    if request.method == 'GET':
-        form = ContactForm()
-    else:
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            subject = form.cleaned_data['subject']
-            from_email = form.cleaned_data['from_email']
-            message = form.cleaned_data['message']
-            try:
-                send_mail(subject, message, from_email, ['ankitmandal244@gmail.com'])
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return redirect('success')
-    return render(request, "email.html", {'form': form})
+def ourteams(request):
+    founders  = Founder.objects.all()
+    technicals = Technical.objects.all()
+    ccs = Cc.objects.all()
+    graphics = Graphic.objects.all()
+    smos = Smo.objects.all()
+    prs = Pr.objects.all()
+    sms = Sm.objects.all()
 
-def successView(request):
-    return HttpResponse('Success! Thank you for your message.')
+    context = {
+        'founders' : founders,
+        'technicals' : technicals,
+        'ccs' : ccs,
+        'graphics' : graphics,
+        'smos' : smos,
+        'sms' : sms,
+        'prs' : prs,
+    }
+    return render (request, "our_team.html", context)
+
+def comingsoon(request):
+    return render (request, "comingsoon.html")
