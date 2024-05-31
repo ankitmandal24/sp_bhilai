@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-h4$e9q5txf^+ix$xx_8prh@+mt(x13*$*n34vi93%-qq+q@+e4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app','.now.sh','*']
 
 
 # Application definition
@@ -79,14 +80,32 @@ WSGI_APPLICATION = 'super.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'super_8ylz',
+#         'USER': 'super_8ylz_user',
+#         'PASSWORD': 'YIMkvb6HKMMyObXpldEFQ4Cby1bb2Hzp',
+#         'HOST': 'dpg-cpcmbcu3e1ms73f095i0-a',
+#         'PORT': '5432'
+#     }
+# }
+
+# Replace the SQLite DATABASES configuration with PostgreSQL:
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        # Replace this value with your local database's connection string.
+        default='postgres://super_8ylz_user:YIMkvb6HKMMyObXpldEFQ4Cby1bb2Hzp@dpg-cpcmbcu3e1ms73f095i0-a.oregon-postgres.render.com/super_8ylz',
+        conn_max_age=600
+    )
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -128,16 +147,29 @@ CLOUDINARY_STORAGE = {
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/images/'
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# STATIC_URL = '/static/'
+# MEDIA_URL = '/images/'
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+#
+# STATICFILES_DIRS = [
+#     BASE_DIR/ 'static'
+# ]
+#
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [
-    BASE_DIR/ 'static'
+    os.path.join(BASE_DIR, 'static')
+    # BASE_DIR / 'static'
 ]
-
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
+# STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','static')
 
 DEFAULT_FROM_EMAIL = 'ankitmandal244@gmail.com'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
